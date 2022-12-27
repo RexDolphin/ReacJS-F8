@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useReducer, useRef, useState } from "react";
 import {nanoid} from 'nanoid';
+import Content_UseReducer_ToDoApp from './Content_UseReducer_ToDoApp';
 
 // so sánh useState và useReducer
 
@@ -44,6 +45,8 @@ function Content_UseReducer(){
       <h1>{count}</h1>
       <button onClick={() => dispatch(UP_ACTION)}>Up</button>
       <button onClick={() => dispatch(DOWN_ACTION)}>Down</button>
+      <br/>
+      <Content_UseReducer_ToDoApp />
     </div>
   )
 }
