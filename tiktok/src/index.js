@@ -4,7 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {nanoid} from 'nanoid';
-console.log(React)
+import { StoreProvider } from './store';
+// import { ThemeProvider } from './ThemeContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Create Fake Comment
@@ -25,7 +27,9 @@ emitComment(2)
 emitComment(3)
 root.render(
   // <React.StrictMode>
-    <App />,
+  <StoreProvider>
+     <App />,
+    </StoreProvider>
   // </React.StrictMode>
 );
 
